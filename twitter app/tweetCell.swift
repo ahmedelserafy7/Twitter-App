@@ -16,17 +16,17 @@ class tweetCell: DatasourceCell {
             messageTextView.text = tweet.message
 //            profileImageView.image = tweet.user.profileImage
             profileImageView.loadImage(urlString: tweet.user.profileImageUrl)
-            let attributedText = NSMutableAttributedString(string: tweet.user.name, attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16)])
+            let attributedText = NSMutableAttributedString(string: tweet.user.name, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)])
             
             let tweetUsername = " \(tweet.user.username)\n"
-            attributedText.append(NSAttributedString(string: tweetUsername, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 15), NSForegroundColorAttributeName: UIColor.gray]))
+            attributedText.append(NSAttributedString(string: tweetUsername, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor: UIColor.gray]))
             
             let paragraghStyle = NSMutableParagraphStyle()
             paragraghStyle.lineSpacing = 4
-            let range = NSMakeRange(0, attributedText.string.characters.count)
-            attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraghStyle, range: range)
+            let range = NSMakeRange(0, attributedText.string.count)
+            attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraghStyle, range: range)
             
-            attributedText.append(NSAttributedString(string: tweet.message, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]))
+            attributedText.append(NSAttributedString(string: tweet.message, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)]))
             
             messageTextView.attributedText = attributedText
             
@@ -91,13 +91,9 @@ class tweetCell: DatasourceCell {
         addSubview(profileImageView)
         addSubview(messageTextView)
         
-//        addSubview(replyButton)
-//        addSubview(retweetButton)
-        
         profileImageView.anchor(topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
         messageTextView.anchor(topAnchor, left: profileImageView.rightAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 8, leftConstant: 4, bottomConstant: 0, rightConstant: 4, widthConstant: 0, heightConstant: 0)
-//        replyButton.anchor(nil, left: messageTextView.leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 20)
-//        
+        
         setupBottomButtons()
     }
     

@@ -37,7 +37,6 @@ class FooterCell: DatasourceCell {
         let label = UILabel()
         label.text = "Show me more"
         label.font = UIFont.systemFont(ofSize: 14)
-//        label.backgroundColor = .white
         label.textColor = titleColor
         return label
     }()

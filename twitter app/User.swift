@@ -8,18 +8,17 @@
 
 import UIKit
 import SwiftyJSON
-import TRON
 
-struct User: JSONDecodable {
+struct User {
     var name: String
     var username: String
-    var bioText: String
+    var bio: String
     var profileImageUrl: String
     
-    init(json: JSON) {
+   init(json: JSON) {
         self.name = json["name"].stringValue
         self.username = json["username"].stringValue
-        self.bioText = json["bio"].stringValue
+        self.bio = json["bio"].stringValue
         self.profileImageUrl = json["profileImageUrl"].stringValue
     }
 }

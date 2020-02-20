@@ -16,7 +16,7 @@ class userCell: DatasourceCell {
             guard let user = datasourceItem as? User else { return }
             nameLabel.text = user.name
             usernameLabel.text = user.username
-            bioTextView.text = user.bioText
+            bioTextView.text = user.bio
             profileImageView.loadImage(urlString: user.profileImageUrl)
         }
     }
@@ -56,8 +56,6 @@ class userCell: DatasourceCell {
     }()
     let followButton: UIButton = {
         let button = UIButton()
-        //        button.titleLabel?.text = "Follow"
-        //        button.setTitle("Follow", for: .normal)
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
         button.layer.borderColor = titleColor.cgColor
@@ -74,7 +72,6 @@ class userCell: DatasourceCell {
     }()
     override func setupViews() {
         super.setupViews()
-//        backgroundColor = .red
         
         backgroundColor = .white
         

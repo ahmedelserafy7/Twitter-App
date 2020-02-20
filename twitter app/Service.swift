@@ -7,38 +7,31 @@
 //
 
 import Foundation
-import TRON
+import LBTAComponents
 import SwiftyJSON
 
 struct Service {
-    
-    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
     
     static let sharedInstance = Service()
     
     func fetchHomeFeed(completion:@escaping (HomeDatasource?, Error?)->()) {
         
-//        print("Done Fetching home Feed")
-    
-        // reach out the internet, after a second or two, it finishes the network call 
-       let request: APIRequest <HomeDatasource,JSONError> = tron.request("twitter/home")
-        request.perform(withSuccess: { (homeDatasource) in
-          
-//            print("Successfully parse json")
-            
-            completion(homeDatasource, nil)
-            
-        }) { (err) in
-            completion(nil, err)
-//            print("failed to parse json", err)
-        }
+        let urlString = "https://api.letsbuildthatapp.com/twitter/home"
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
+            guard let data = data else { return }
+            do {
+                let json = try JSON(data: data)
+                 let homeDatasource = try HomeDatasource(json: json)
+                
+                    completion(homeDatasource, nil)
+                
+            } catch let err {
+                print(err)
+            }
+        }.resume()
     } 
 }
 
-class JSONError: JSONDecodable {
-    
-    required init(json: JSON) throws {
-        print("JSONError")
-    }
-}
 

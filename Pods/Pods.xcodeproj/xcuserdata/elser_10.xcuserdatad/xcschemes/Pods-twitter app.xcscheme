@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A356D048030BFC1459CECFA75826ED7F"
+               BlueprintIdentifier = "198230CE3ED724FA7E1FC48EE63C4C65"
                BuildableName = "Pods_twitter_app.framework"
                BlueprintName = "Pods-twitter app"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A356D048030BFC1459CECFA75826ED7F"
+            BlueprintIdentifier = "198230CE3ED724FA7E1FC48EE63C4C65"
             BuildableName = "Pods_twitter_app.framework"
             BlueprintName = "Pods-twitter app"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -60,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A356D048030BFC1459CECFA75826ED7F"
-            BuildableName = "Pods_twitter_app.framework"
-            BlueprintName = "Pods-twitter app"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

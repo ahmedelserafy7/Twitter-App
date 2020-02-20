@@ -7,8 +7,8 @@ target 'twitter app' do
 
   # Pods for twitter app
 
-  pod ‘LBTAComponents’, ‘~> 0.1.9’
-
-  pod 'TRON', '~> 3.0’
+  pod "LBTAComponents"
+  pod 'TRON', '~> 5.0.0'
+  pod 'SwiftyJSON'
  
 end
