@@ -9,7 +9,7 @@ This project is a mocking app like **Twitter**.
 ## Used Skills
 
 1. Creating **Header**, Cell, **Footer** collectionView.
-2. Using **dynamic Cell sizing**.
+2. Using **Dynamic Cell Sizing**.
 3. Parsing JSON With **SwiftyJSON** and **TRON**.
 4. Using **Singleton** Design Pattern to parse JSON.
  
