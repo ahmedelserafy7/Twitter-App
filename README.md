@@ -17,4 +17,4 @@ This project is a mocking app like **Twitter**.
 
 This project requires: 
 * **Xcode 10+** 
-* **iOS 12.0+**
+* **iOS 12.4+**
