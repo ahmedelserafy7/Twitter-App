@@ -2,7 +2,7 @@
 
 ## Description
 
-**Twitter App** is an app mocks up Twitter page.
+**Twitter App** is an app mocks up Twitter homepage.
 
 <img src="https://i.imgur.com/vyr3oW2.png" ><img src="https://i.imgur.com/BmrxXuj.png">
 
