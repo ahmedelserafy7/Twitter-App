@@ -1,10 +1,10 @@
 # Twitter-App
 
-<img src="https://i.imgur.com/vyr3oW2.png" ><img src="https://i.imgur.com/BmrxXuj.png">
-
 ## Description
 
-This project is a mocking app like **Twitter**.
+**Twitter App** is an app mocks up Twitter page.
+
+<img src="https://i.imgur.com/vyr3oW2.png" ><img src="https://i.imgur.com/BmrxXuj.png">
 
 ## Used Skills
 
